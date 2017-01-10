@@ -1501,6 +1501,9 @@
         }
         
     }
+    
+    self.navigationController.navigationBar.hidden = YES;
+    self.viewController.toolbar.hidden = YES;
 }
 
 -(void)changeUIForViewMode:(MHGalleryViewMode)viewMode{
@@ -1528,6 +1531,12 @@
 }
 
 -(void)handelImageTap:(UIGestureRecognizer *)gestureRecognizer{
+    
+    
+    [self.viewController donePressed];
+
+    return;
+    
     if (!self.viewController.isHiddingToolBarAndNavigationBar) {
         if ([gestureRecognizer respondsToSelector:@selector(locationInView:)]) {
             CGPoint tappedLocation = [gestureRecognizer locationInView:self.view];
