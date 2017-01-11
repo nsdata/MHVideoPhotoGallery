@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CCE50708F0B1B954A1D43543 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BEA0714A525E3C516EBDBD /* libPods.a */; };
+		11B596FA1E24DCD700D073E6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 11B596F91E24DCD700D073E6 /* Podfile */; };
+		11B596FD1E24F2AC00D073E6 /* savePhotoMH@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B596FB1E24F2AC00D073E6 /* savePhotoMH@2x.png */; };
+		11B596FE1E24F2AC00D073E6 /* savePhotoMH@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B596FC1E24F2AC00D073E6 /* savePhotoMH@3x.png */; };
+		5D0CEE6FC3BBFE1174D0CDE9 /* Pods_MHVideoPhotoGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46483806131D499F6EC10761 /* Pods_MHVideoPhotoGallery.framework */; };
 		F514263518911D8E0091E3DF /* 707-albums-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F514263318911D8E0091E3DF /* 707-albums-selected.png */; };
 		F514263618911D8E0091E3DF /* 707-albums-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F514263418911D8E0091E3DF /* 707-albums-selected@2x.png */; };
 		F514263918911D920091E3DF /* 705-photos-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F514263718911D920091E3DF /* 705-photos-selected.png */; };
@@ -108,9 +111,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		48BEA0714A525E3C516EBDBD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7034C256C78A0FAB4D812A2B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		A1831E23B84EF67E23139C0E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		11B596F91E24DCD700D073E6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		11B596FB1E24F2AC00D073E6 /* savePhotoMH@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "savePhotoMH@2x.png"; sourceTree = "<group>"; };
+		11B596FC1E24F2AC00D073E6 /* savePhotoMH@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "savePhotoMH@3x.png"; sourceTree = "<group>"; };
+		2A070578503FB5A67EBDFDB9 /* Pods-MHVideoPhotoGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHVideoPhotoGallery.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHVideoPhotoGallery/Pods-MHVideoPhotoGallery.release.xcconfig"; sourceTree = "<group>"; };
+		46483806131D499F6EC10761 /* Pods_MHVideoPhotoGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHVideoPhotoGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E2C0F273C13B051C6E33DE2 /* Pods-MHVideoPhotoGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHVideoPhotoGallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHVideoPhotoGallery/Pods-MHVideoPhotoGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		F514263318911D8E0091E3DF /* 707-albums-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "707-albums-selected.png"; sourceTree = "<group>"; };
 		F514263418911D8E0091E3DF /* 707-albums-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "707-albums-selected@2x.png"; sourceTree = "<group>"; };
 		F514263718911D920091E3DF /* 705-photos-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "705-photos-selected.png"; sourceTree = "<group>"; };
@@ -248,7 +254,7 @@
 				F53F924617EB008100A9FE6A /* CoreGraphics.framework in Frameworks */,
 				F53F924817EB008100A9FE6A /* UIKit.framework in Frameworks */,
 				F53F924417EB008100A9FE6A /* Foundation.framework in Frameworks */,
-				CCE50708F0B1B954A1D43543 /* libPods.a in Frameworks */,
+				5D0CEE6FC3BBFE1174D0CDE9 /* Pods_MHVideoPhotoGallery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,11 +271,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		64EBA583430CC00734798E3D /* Pods */ = {
+		EC0C6316513240C747575112 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7034C256C78A0FAB4D812A2B /* Pods.debug.xcconfig */,
-				A1831E23B84EF67E23139C0E /* Pods.release.xcconfig */,
+				9E2C0F273C13B051C6E33DE2 /* Pods-MHVideoPhotoGallery.debug.xcconfig */,
+				2A070578503FB5A67EBDFDB9 /* Pods-MHVideoPhotoGallery.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -277,11 +283,12 @@
 		F53F923717EB008100A9FE6A = {
 			isa = PBXGroup;
 			children = (
+				11B596F91E24DCD700D073E6 /* Podfile */,
 				F53F924917EB008100A9FE6A /* MHVideoPhotoGallery */,
 				F53F926817EB008100A9FE6A /* MHVideoPhotoGalleryTests */,
 				F53F924217EB008100A9FE6A /* Frameworks */,
 				F53F924117EB008100A9FE6A /* Products */,
-				64EBA583430CC00734798E3D /* Pods */,
+				EC0C6316513240C747575112 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -303,7 +310,7 @@
 				F53F924517EB008100A9FE6A /* CoreGraphics.framework */,
 				F53F924717EB008100A9FE6A /* UIKit.framework */,
 				F53F926217EB008100A9FE6A /* XCTest.framework */,
-				48BEA0714A525E3C516EBDBD /* libPods.a */,
+				46483806131D499F6EC10761 /* Pods_MHVideoPhotoGallery.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -428,6 +435,8 @@
 		F553D2DA1892B57E00BA4283 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				11B596FB1E24F2AC00D073E6 /* savePhotoMH@2x.png */,
+				11B596FC1E24F2AC00D073E6 /* savePhotoMH@3x.png */,
 				F553D2DB1892B58800BA4283 /* activityMH.png */,
 				F553D2DC1892B58800BA4283 /* activtyMH@2x.png */,
 				F553D32618967E5300BA4283 /* ic_square.png */,
@@ -608,12 +617,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F53F927217EB008100A9FE6A /* Build configuration list for PBXNativeTarget "MHVideoPhotoGallery" */;
 			buildPhases = (
-				75DDE8B2C1B33F486A5B8488 /* Check Pods Manifest.lock */,
+				73C176424D127B46B393CFB5 /* [CP] Check Pods Manifest.lock */,
 				F53F923C17EB008100A9FE6A /* Sources */,
 				F53F923D17EB008100A9FE6A /* Frameworks */,
 				F53F923E17EB008100A9FE6A /* Resources */,
-				0C519C9D844EB0B45067DB4C /* Embed Pods Frameworks */,
-				87746AA85625C06CC49A954C /* Copy Pods Resources */,
+				2B461A726F13EFDC240C06CB /* [CP] Embed Pods Frameworks */,
+				8AAB5F7BC565EF41CE7C4EC7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -705,6 +714,7 @@
 				F514263518911D8E0091E3DF /* 707-albums-selected.png in Resources */,
 				F577F33D18D73D3100880B72 /* Sydney-iPhone.m4v in Resources */,
 				F553D30C1892B58800BA4283 /* pause.png in Resources */,
+				11B596FA1E24DCD700D073E6 /* Podfile in Resources */,
 				F553D30E1892B58800BA4283 /* play.png in Resources */,
 				F553D3031892B58800BA4283 /* error@2x.png in Resources */,
 				F553D32818967E5300BA4283 /* ic_square.png in Resources */,
@@ -723,6 +733,7 @@
 				F5D9AB5118B665A80014AAC6 /* MHGallery.bundle in Resources */,
 				F553D3191892B58800BA4283 /* unplay.png in Resources */,
 				F553D3001892B58800BA4283 /* EditControlSelected.png in Resources */,
+				11B596FD1E24F2AC00D073E6 /* savePhotoMH@2x.png in Resources */,
 				F514263E18911D950091E3DF /* 729-top-list-selected@2x.png in Resources */,
 				F553D2FD1892B58800BA4283 /* activtyMH@2x.png in Resources */,
 				F553D3071892B58800BA4283 /* left_arrow@2x.png in Resources */,
@@ -732,6 +743,7 @@
 				F553D2FF1892B58800BA4283 /* EditControl@2x.png in Resources */,
 				F553D30F1892B58800BA4283 /* play@2x.png in Resources */,
 				F553D3061892B58800BA4283 /* left_arrow.png in Resources */,
+				11B596FE1E24F2AC00D073E6 /* savePhotoMH@3x.png in Resources */,
 				F553D2FC1892B58800BA4283 /* activityMH.png in Resources */,
 				F553D31A1892B58800BA4283 /* unplay@2x.png in Resources */,
 			);
@@ -748,49 +760,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C519C9D844EB0B45067DB4C /* Embed Pods Frameworks */ = {
+		2B461A726F13EFDC240C06CB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHVideoPhotoGallery/Pods-MHVideoPhotoGallery-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		75DDE8B2C1B33F486A5B8488 /* Check Pods Manifest.lock */ = {
+		73C176424D127B46B393CFB5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		87746AA85625C06CC49A954C /* Copy Pods Resources */ = {
+		8AAB5F7BC565EF41CE7C4EC7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHVideoPhotoGallery/Pods-MHVideoPhotoGallery-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -949,7 +961,7 @@
 		};
 		F53F927317EB008100A9FE6A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7034C256C78A0FAB4D812A2B /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 9E2C0F273C13B051C6E33DE2 /* Pods-MHVideoPhotoGallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -958,7 +970,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MHVideoPhotoGallery/MHVideoPhotoGallery-Prefix.pch";
 				INFOPLIST_FILE = "MHVideoPhotoGallery/MHVideoPhotoGallery-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MarioHahn.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -969,7 +981,7 @@
 		};
 		F53F927417EB008100A9FE6A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1831E23B84EF67E23139C0E /* Pods.release.xcconfig */;
+			baseConfigurationReference = 2A070578503FB5A67EBDFDB9 /* Pods-MHVideoPhotoGallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -978,7 +990,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MHVideoPhotoGallery/MHVideoPhotoGallery-Prefix.pch";
 				INFOPLIST_FILE = "MHVideoPhotoGallery/MHVideoPhotoGallery-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MarioHahn.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

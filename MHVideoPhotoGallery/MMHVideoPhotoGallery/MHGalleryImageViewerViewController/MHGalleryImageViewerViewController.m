@@ -1003,9 +1003,8 @@
         
         self.imageView.userInteractionEnabled = YES;
         self.imageView.backgroundColor = [UIColor blackColor];
-        
+
         [imageTap requireGestureRecognizerToFail: doubleTap];
-        
         
         
         if (self.item.galleryType == MHGalleryTypeImage) {
@@ -1033,8 +1032,10 @@
                                                                 }];
         }
 
+        self.viewController.view.backgroundColor = [UIColor blackColor];
+
         UIButton *btn = [[UIButton alloc]init];
-        [btn setImage:[UIImage imageNamed:@"saveMH"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"savePhotoMH"] forState:UIControlStateNormal];
         [self.viewController.view addSubview:btn];
         CGSize screenSize = [UIScreen mainScreen].bounds.size;
         btn.frame = CGRectMake(screenSize.width - 50, 30, 50, 50);
