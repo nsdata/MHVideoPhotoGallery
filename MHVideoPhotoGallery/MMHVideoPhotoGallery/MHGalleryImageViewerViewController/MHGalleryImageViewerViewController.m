@@ -42,6 +42,9 @@
 @end
 
 @interface MHGalleryImageViewerViewController()<MHGalleryLabelDelegate,TTTAttributedLabelDelegate>
+
+@property (nonatomic, strong) UILabel                  *customTitleLabel;
+
 @property (nonatomic, strong) MHGradientView           *bottomSuperView;
 @property (nonatomic, strong) MHGradientView           *topSuperView;
 
@@ -413,6 +416,9 @@
 }
 
 -(void)updateTitleLabelForIndex:(NSInteger)index{
+    
+    self.customTitleLabel.text = [NSString stringWithFormat:@"%ld/%ld",index + 1, (long)self.numberOfGalleryItems];
+
     if (index < self.numberOfGalleryItems) {
         MHGalleryItem *item = [self itemForIndex:index];
         if (item.titleString) {
@@ -715,6 +721,28 @@
     self.pageViewController.view.bounds = self.view.bounds;
     [self.pageViewController.view.subviews.firstObject setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) ];
     
+}
+    
+-(void) cumstomTitleBar {
+
+    if (nil == self.customTitleLabel) {
+        self.view.backgroundColor = [UIColor blackColor];
+        
+        CGSize screenSize = [UIScreen mainScreen].bounds.size;
+        
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake((screenSize.width - 120) / 2, 20, 120, 42)];
+        label.textColor = [UIColor whiteColor];
+        label.backgroundColor = [UIColor clearColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        [self.view addSubview:label];
+        
+        self.customTitleLabel = label;
+        
+        UIButton *btn = [[UIButton alloc]init];
+        [btn setImage:[UIImage imageNamed:@"savePhotoMH"] forState:UIControlStateNormal];
+        [self.view addSubview:btn];
+        btn.frame = CGRectMake(screenSize.width - 50, 20, 42, 42);
+    }
 }
 
 @end
@@ -1031,14 +1059,8 @@
                                                                     [weakSelf.act stopAnimating];
                                                                 }];
         }
-
-        self.viewController.view.backgroundColor = [UIColor blackColor];
-
-        UIButton *btn = [[UIButton alloc]init];
-        [btn setImage:[UIImage imageNamed:@"savePhotoMH"] forState:UIControlStateNormal];
-        [self.viewController.view addSubview:btn];
-        CGSize screenSize = [UIScreen mainScreen].bounds.size;
-        btn.frame = CGRectMake(screenSize.width - 50, 30, 50, 50);
+        
+        [self.viewController cumstomTitleBar];
     }
     
     return self;
