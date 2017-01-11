@@ -10,6 +10,7 @@
 		11B596FA1E24DCD700D073E6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 11B596F91E24DCD700D073E6 /* Podfile */; };
 		11B597011E25D59000D073E6 /* savePhotoMH@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B596FF1E25D59000D073E6 /* savePhotoMH@2x.png */; };
 		11B597021E25D59000D073E6 /* savePhotoMH@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B597001E25D59000D073E6 /* savePhotoMH@3x.png */; };
+		11B597051E26003200D073E6 /* MHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B597041E26003200D073E6 /* MHAlertView.m */; };
 		5D0CEE6FC3BBFE1174D0CDE9 /* Pods_MHVideoPhotoGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46483806131D499F6EC10761 /* Pods_MHVideoPhotoGallery.framework */; };
 		F514263518911D8E0091E3DF /* 707-albums-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F514263318911D8E0091E3DF /* 707-albums-selected.png */; };
 		F514263618911D8E0091E3DF /* 707-albums-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F514263418911D8E0091E3DF /* 707-albums-selected@2x.png */; };
@@ -114,6 +115,8 @@
 		11B596F91E24DCD700D073E6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		11B596FF1E25D59000D073E6 /* savePhotoMH@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "savePhotoMH@2x.png"; path = "MMHVideoPhotoGallery/Images/savePhotoMH@2x.png"; sourceTree = "<group>"; };
 		11B597001E25D59000D073E6 /* savePhotoMH@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "savePhotoMH@3x.png"; path = "MMHVideoPhotoGallery/Images/savePhotoMH@3x.png"; sourceTree = "<group>"; };
+		11B597031E26003200D073E6 /* MHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHAlertView.h; path = MMHVideoPhotoGallery/MHGalleryImageViewerViewController/MHAlertView.h; sourceTree = "<group>"; };
+		11B597041E26003200D073E6 /* MHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHAlertView.m; path = MMHVideoPhotoGallery/MHGalleryImageViewerViewController/MHAlertView.m; sourceTree = "<group>"; };
 		2A070578503FB5A67EBDFDB9 /* Pods-MHVideoPhotoGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHVideoPhotoGallery.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHVideoPhotoGallery/Pods-MHVideoPhotoGallery.release.xcconfig"; sourceTree = "<group>"; };
 		46483806131D499F6EC10761 /* Pods_MHVideoPhotoGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHVideoPhotoGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E2C0F273C13B051C6E33DE2 /* Pods-MHVideoPhotoGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHVideoPhotoGallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHVideoPhotoGallery/Pods-MHVideoPhotoGallery.debug.xcconfig"; sourceTree = "<group>"; };
@@ -588,6 +591,8 @@
 			children = (
 				F5DBBF2F187D584C00BEFE29 /* MHGalleryImageViewerViewController.h */,
 				F5DBBF30187D584C00BEFE29 /* MHGalleryImageViewerViewController.m */,
+				11B597031E26003200D073E6 /* MHAlertView.h */,
+				11B597041E26003200D073E6 /* MHAlertView.m */,
 			);
 			name = MHGalleryImageViewerViewController;
 			sourceTree = "<group>";
@@ -834,6 +839,7 @@
 				F5F8DA2D18B6A6A100EB25F2 /* MHPresenterImageView.m in Sources */,
 				F5C52E8D18C0828E001E431E /* MHTransitionPresentMHGallery.m in Sources */,
 				F536534A1897D11100748466 /* ExampleViewControllerLocal.m in Sources */,
+				11B597051E26003200D073E6 /* MHAlertView.m in Sources */,
 				F59A9C801BDA3EBF00433A30 /* MHBarButtonItem.m in Sources */,
 				F5C52E8E18C0828E001E431E /* MHTransitionShowDetail.m in Sources */,
 				F55CB5BC18C5FE2E0039941E /* MHCustomization.m in Sources */,

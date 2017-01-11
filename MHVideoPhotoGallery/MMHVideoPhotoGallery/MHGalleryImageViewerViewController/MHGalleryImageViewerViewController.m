@@ -15,6 +15,7 @@
 #import "Masonry.h"
 #import "MHGradientView.h"
 #import "MHBarButtonItem.h"
+#import "MHAlertView.h"
 
 @implementation MHPinchGestureRecognizer
 @end
@@ -739,11 +740,30 @@
         self.customTitleLabel = label;
         
         UIButton *btn = [[UIButton alloc]init];
-        [btn setImage:[UIImage imageNamed:@"savePhotoMH"] forState:UIControlStateNormal];
+        [btn setImage:MHGalleryImage(@"savePhotoMH") forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(savePhoto) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:btn];
         btn.frame = CGRectMake(screenSize.width - 50, 20, 42, 42);
     }
 }
+    
+-(void)savePhoto {
+    MHImageViewController *imageViewer = self.pageViewController.viewControllers.firstObject;
+    UIImage *img = imageViewer.imageView.image;
+    if (img) {
+        UIImageWriteToSavedPhotosAlbum(img,
+                                       self,
+                                       @selector(image:didFinishSavingWithError:contextInfo:),
+                                       nil);
+    }
+}
+- (void) image:(UIImage*)image didFinishSavingWithError:(NSError *)error contextInfo:(NSDictionary*)info {
+    if (!error) {
+        [MHAlertView showFadeIn:NSLocalizedString(@"picture saved", nil) duration:1.0];
+    }
+}
+
+
 
 @end
 
