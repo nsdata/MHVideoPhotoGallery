@@ -731,7 +731,7 @@
         
         CGSize screenSize = [UIScreen mainScreen].bounds.size;
         
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake((screenSize.width - 120) / 2, 20, 120, 42)];
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake((screenSize.width - 120) / 2, 15, 120, 42)];
         label.textColor = [UIColor whiteColor];
         label.backgroundColor = [UIColor clearColor];
         label.textAlignment = NSTextAlignmentCenter;
@@ -743,7 +743,7 @@
         [btn setImage:MHGalleryImage(@"savePhotoMH") forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(savePhoto) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:btn];
-        btn.frame = CGRectMake(screenSize.width - 50, 20, 42, 42);
+        btn.frame = CGRectMake(screenSize.width - 50, 15, 42, 42);
     }
 }
     
@@ -1508,7 +1508,8 @@
     [super viewWillAppear:animated];
     
     self.moviePlayer.backgroundView.backgroundColor = [self.viewController.UICustomization MHGalleryBackgroundColorForViewMode:[self currentViewMode]];
-    self.scrollView.backgroundColor = [self.viewController.UICustomization MHGalleryBackgroundColorForViewMode:[self currentViewMode]];
+//    self.scrollView.backgroundColor = [self.viewController.UICustomization MHGalleryBackgroundColorForViewMode:[self currentViewMode]];
+    self.scrollView.backgroundColor = [UIColor blackColor];
     
     if (self.viewController.isHiddingToolBarAndNavigationBar) {
         self.act.color = [UIColor whiteColor];
@@ -1564,7 +1565,9 @@
     }
     
     self.moviePlayer.backgroundView.backgroundColor = [self.viewController.UICustomization MHGalleryBackgroundColorForViewMode:viewMode];
-    self.scrollView.backgroundColor = [self.viewController.UICustomization MHGalleryBackgroundColorForViewMode:viewMode];
+//    self.scrollView.backgroundColor = [self.viewController.UICustomization MHGalleryBackgroundColorForViewMode:viewMode];
+    self.scrollView.backgroundColor = [UIColor blackColor];
+
     self.viewController.pageViewController.view.backgroundColor = [self.viewController.UICustomization MHGalleryBackgroundColorForViewMode:viewMode];
     
     self.navigationController.navigationBar.alpha = alpha;
@@ -1649,6 +1652,7 @@
     zoomRect.origin.y    = touchPoint.y - ((zoomRect.size.height / 2.0));
     
     [self.scrollView zoomToRect:zoomRect animated:YES];
+    self.scrollView.backgroundColor = [UIColor blackColor];
 }
 
 
