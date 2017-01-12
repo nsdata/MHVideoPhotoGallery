@@ -91,8 +91,8 @@
     if (imageViewer.moviePlayer) {
         [imageViewer removeAllMoviePlayerViewsAndNotifications];
     }
-//    MHTransitionDismissMHGallery *dismissTransiton = [MHTransitionDismissMHGallery new];
-    MHTransitionDismissDefault *dismissTransiton = [MHTransitionDismissDefault new];
+    MHTransitionDismissMHGallery *dismissTransiton = [MHTransitionDismissMHGallery new];
+//    MHTransitionDismissDefault *dismissTransiton = [MHTransitionDismissDefault new];
     dismissTransiton.orientationTransformBeforeDismiss = [(NSNumber *)[self.navigationController.view valueForKeyPath:@"layer.transform.rotation.z"] floatValue];
     dismissTransiton.finishButtonAction = YES;
     imageViewer.interactiveTransition = dismissTransiton;

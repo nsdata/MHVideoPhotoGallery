@@ -96,6 +96,9 @@
     }
     double delayInSeconds = delayTime;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    
+    if (self.transitionImageView) {
+
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -120,6 +123,37 @@
             
         });
     });
+    }else{
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //            self.transitionImageView.hidden = YES;
+                
+                [UIView animateWithDuration:duration animations:^{
+                    whiteView.alpha =0;
+                    [toViewControllerNC view].alpha = 1;
+                    
+                    cellImageSnapshot.alpha = 0.0;
+                    
+                    //                fromViewController.view.transform = CGAffineTransformMakeScale(0.01, 0.01);
+                    
+                    //                cellImageSnapshot.frame =[containerView convertRect:self.transitionImageView.frame fromView:self.transitionImageView.superview];
+                    //
+                    //                if (self.transitionImageView.contentMode == UIViewContentModeScaleAspectFit) {
+                    //                    cellImageSnapshot.contentMode = UIViewContentModeScaleAspectFit;
+                    //                }
+                    //                if (self.transitionImageView.contentMode == UIViewContentModeScaleAspectFill) {
+                    //                    cellImageSnapshot.contentMode = UIViewContentModeScaleAspectFill;
+                    //                }
+                } completion:^(BOOL finished) {
+                    //                self.transitionImageView.hidden = NO;
+                    [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
+                }];
+                
+            });
+        });
+
+    }
     
 }
 
@@ -505,6 +539,8 @@
     }
     double delayInSeconds = delayTime;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+
+    
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         
         dispatch_async(dispatch_get_main_queue(), ^{

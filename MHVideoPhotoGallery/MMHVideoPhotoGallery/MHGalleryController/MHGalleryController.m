@@ -153,26 +153,23 @@
 //        if (!imageViewer.dismissFromImageView && viewer.interactiveTransition.finishButtonAction) {
 //            return nil;
 //        }
-//        
-//        if (viewer.interactiveTransition) {
-//            MHTransitionDismissMHGallery *detail = viewer.interactiveTransition;
-//            detail.transitionImageView = imageViewer.dismissFromImageView;
-//            return detail;
-//        }
-//        
-//        MHTransitionDismissMHGallery *detail = MHTransitionDismissMHGallery.new;
-//        detail.transitionImageView = imageViewer.dismissFromImageView;
-//        return detail;
 
-        // use default now - 2017.1.12
+//        if ( viewer.interactiveTransition.finishButtonAction) {
+//            return nil;
+//        }
+        
         if (viewer.interactiveTransition) {
-            MHTransitionDismissDefault *detail = viewer.interactiveTransition;
-            //            detail.transitionImageView = imageViewer.dismissFromImageView;
+            MHTransitionDismissMHGallery *detail = viewer.interactiveTransition;
+            if (imageViewer.dismissFromImageView) {
+                detail.transitionImageView = imageViewer.dismissFromImageView;
+            }
             return detail;
         }
-
-        MHTransitionDismissDefault *detail = MHTransitionDismissDefault.new;
-        //        detail.transitionImageView = imageViewer.dismissFromImageView;
+        
+        MHTransitionDismissMHGallery *detail = MHTransitionDismissMHGallery.new;
+        if (imageViewer.dismissFromImageView) {
+            detail.transitionImageView = imageViewer.dismissFromImageView;
+        }
         return detail;
 
     }
