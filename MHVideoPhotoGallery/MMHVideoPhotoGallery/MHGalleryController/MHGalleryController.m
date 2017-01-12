@@ -150,19 +150,31 @@
         MHGalleryImageViewerViewController *imageViewer = [(UINavigationController*)dismissed  viewControllers].lastObject;
         MHImageViewController *viewer = imageViewer.pageViewController.viewControllers.firstObject;
         
-        if (!imageViewer.dismissFromImageView && viewer.interactiveTransition.finishButtonAction) {
-            return nil;
-        }
-        
+//        if (!imageViewer.dismissFromImageView && viewer.interactiveTransition.finishButtonAction) {
+//            return nil;
+//        }
+//        
+//        if (viewer.interactiveTransition) {
+//            MHTransitionDismissMHGallery *detail = viewer.interactiveTransition;
+//            detail.transitionImageView = imageViewer.dismissFromImageView;
+//            return detail;
+//        }
+//        
+//        MHTransitionDismissMHGallery *detail = MHTransitionDismissMHGallery.new;
+//        detail.transitionImageView = imageViewer.dismissFromImageView;
+//        return detail;
+
+        // use default now - 2017.1.12
         if (viewer.interactiveTransition) {
-            MHTransitionDismissMHGallery *detail = viewer.interactiveTransition;
-            detail.transitionImageView = imageViewer.dismissFromImageView;
+            MHTransitionDismissDefault *detail = viewer.interactiveTransition;
+            //            detail.transitionImageView = imageViewer.dismissFromImageView;
             return detail;
         }
-        
-        MHTransitionDismissMHGallery *detail = MHTransitionDismissMHGallery.new;
-        detail.transitionImageView = imageViewer.dismissFromImageView;
+
+        MHTransitionDismissDefault *detail = MHTransitionDismissDefault.new;
+        //        detail.transitionImageView = imageViewer.dismissFromImageView;
         return detail;
+
     }
     return nil;
 }
