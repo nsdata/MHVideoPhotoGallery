@@ -69,20 +69,20 @@
         cellImageSnapshot.contentMode = UIViewContentModeScaleAspectFit;
     }
     
-    [UIView animateWithDuration:duration animations:^{
-        cellImageSnapshot.layer.cornerRadius = 0;
-        
-        if(self.presentingImageView.contentMode == UIViewContentModeScaleAspectFit){
-            cellImageSnapshot.frame = toViewController.view.bounds;
-        }
-        backView.alpha =1;
-    } completion:^(BOOL finished) {        
-        [UIView animateWithDuration:0.1 animations:^{
-            cellImageSnapshot.transform = CGAffineTransformScale(CGAffineTransformIdentity,1.02,1.02);
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:0.1 animations:^{
-                cellImageSnapshot.transform = CGAffineTransformScale(CGAffineTransformIdentity,1.00,1.00);
-            } completion:^(BOOL finished) {
+//    [UIView animateWithDuration:duration animations:^{
+//        cellImageSnapshot.layer.cornerRadius = 0;
+//        
+//        if(self.presentingImageView.contentMode == UIViewContentModeScaleAspectFit){
+//            cellImageSnapshot.frame = toViewController.view.bounds;
+//        }
+//        backView.alpha =1;
+//    } completion:^(BOOL finished) {        
+//        [UIView animateWithDuration:0.1 animations:^{
+//            cellImageSnapshot.transform = CGAffineTransformScale(CGAffineTransformIdentity,1.02,1.02);
+//        } completion:^(BOOL finished) {
+//            [UIView animateWithDuration:0.1 animations:^{
+//                cellImageSnapshot.transform = CGAffineTransformScale(CGAffineTransformIdentity,1.00,1.00);
+//            } completion:^(BOOL finished) {
                 [UIView animateWithDuration:0.35 animations:^{
                     toViewController.view.alpha = 1.0;
                     
@@ -91,12 +91,12 @@
                     [cellImageSnapshot removeFromSuperview];
                     [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
                 }];
-            }];
-        }];
-    }];
+//            }];
+//        }];
+//    }];
 }
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    return 0.3;
+    return 0.4;
 }
 
 
