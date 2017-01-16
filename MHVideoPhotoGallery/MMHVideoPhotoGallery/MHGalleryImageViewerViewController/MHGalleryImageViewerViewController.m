@@ -957,7 +957,7 @@
         self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth |UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleBottomMargin;
         self.scrollView.delegate = self;
         self.scrollView.tag = 406;
-        self.scrollView.maximumZoomScale =3;
+        self.scrollView.maximumZoomScale =10;
         self.scrollView.minimumZoomScale= 1;
         self.scrollView.userInteractionEnabled = YES;
         [self.view addSubview:self.scrollView];
