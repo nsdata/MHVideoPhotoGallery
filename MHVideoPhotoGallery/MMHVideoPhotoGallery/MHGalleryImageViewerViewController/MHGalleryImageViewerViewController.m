@@ -1523,7 +1523,7 @@
                 }
             }
         }
-        self.act.color = [UIColor blackColor];
+        self.act.color = [UIColor whiteColor];
     }
     if (self.item.galleryType == MHGalleryTypeVideo) {
         
