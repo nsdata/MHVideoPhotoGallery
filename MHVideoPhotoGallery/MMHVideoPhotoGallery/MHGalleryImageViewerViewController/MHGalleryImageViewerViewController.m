@@ -1509,8 +1509,7 @@
     [super viewWillAppear:animated];
     
     self.moviePlayer.backgroundView.backgroundColor = [self.viewController.UICustomization MHGalleryBackgroundColorForViewMode:[self currentViewMode]];
-//    self.scrollView.backgroundColor = [self.viewController.UICustomization MHGalleryBackgroundColorForViewMode:[self currentViewMode]];
-    self.scrollView.backgroundColor = [UIColor blackColor];
+    self.scrollView.backgroundColor = [self.viewController.UICustomization MHGalleryBackgroundColorForViewMode:[self currentViewMode]];
     
     if (self.viewController.isHiddingToolBarAndNavigationBar) {
         self.act.color = [UIColor whiteColor];
@@ -1566,8 +1565,7 @@
     }
     
     self.moviePlayer.backgroundView.backgroundColor = [self.viewController.UICustomization MHGalleryBackgroundColorForViewMode:viewMode];
-//    self.scrollView.backgroundColor = [self.viewController.UICustomization MHGalleryBackgroundColorForViewMode:viewMode];
-    self.scrollView.backgroundColor = [UIColor blackColor];
+    self.scrollView.backgroundColor = [self.viewController.UICustomization MHGalleryBackgroundColorForViewMode:viewMode];
 
     self.viewController.pageViewController.view.backgroundColor = [self.viewController.UICustomization MHGalleryBackgroundColorForViewMode:viewMode];
     

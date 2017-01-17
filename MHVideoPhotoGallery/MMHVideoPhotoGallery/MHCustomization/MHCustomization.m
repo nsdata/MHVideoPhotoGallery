@@ -110,7 +110,8 @@
 }
 
 -(UIColor*)MHGalleryBackgroundColorForViewMode:(MHGalleryViewMode)viewMode{
-    return self.backgroundColorsForViewModes[[NSString stringWithFormat:@"%@",@(viewMode)]];
+    return [UIColor blackColor];
+//    return self.backgroundColorsForViewModes[[NSString stringWithFormat:@"%@",@(viewMode)]];
 }
 
 

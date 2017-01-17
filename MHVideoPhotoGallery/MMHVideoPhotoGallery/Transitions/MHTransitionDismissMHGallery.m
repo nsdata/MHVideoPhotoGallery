@@ -64,7 +64,7 @@
     [toViewControllerNC view].alpha = 0;
     
     UIView *whiteView = [UIView.alloc initWithFrame:fromViewController.view.frame];
-    whiteView.backgroundColor = [UIColor blackColor];//[fromViewController.UICustomization MHGalleryBackgroundColorForViewMode:MHGalleryViewModeImageViewerNavigationBarShown];
+    whiteView.backgroundColor = [fromViewController.UICustomization MHGalleryBackgroundColorForViewMode:MHGalleryViewModeImageViewerNavigationBarShown];
     
     if (imageViewer.isHiddingToolBarAndNavigationBar) {
         whiteView.backgroundColor = [fromViewController.UICustomization MHGalleryBackgroundColorForViewMode:MHGalleryViewModeImageViewerNavigationBarHidden];
