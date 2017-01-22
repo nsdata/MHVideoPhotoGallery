@@ -9,6 +9,8 @@
 #import "UIImageView+MHGallery.h"
 #import "MHGallery.h"
 #import "UIImageView+WebCache.h"
+#import <YYWebImage/UIImageView+YYWebImage.h>
+
 
 @implementation UIImageView (MHGallery)
 
@@ -62,14 +64,32 @@
             toLoadURL = item.thumbnailURL;
             placeholderURL = item.URLString;
         }
+
+        [self yy_setImageWithURL:[NSURL URLWithString:toLoadURL]
+                     placeholder:nil
+                         options:YYWebImageOptionProgressiveBlur | YYWebImageOptionSetImageWithFadeAnimation
+                        progress:nil
+                       transform:^UIImage *(UIImage *image, NSURL *url) {
+
+                           return image;
+                       }
+                      completion:^(UIImage * _Nullable image,
+                                   NSURL *url,
+                                   YYWebImageFromType from,
+                                   YYWebImageStage stage,
+                                   NSError * _Nullable error) {
+                          if (succeedBlock) {
+                              succeedBlock (image,error);
+                          }
+                      }];
         
-        [self sd_setImageWithURL:[NSURL URLWithString:toLoadURL]
-                placeholderImage:[SDImageCache.sharedImageCache imageFromDiskCacheForKey:placeholderURL]
-                       completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                           if (succeedBlock) {
-                               succeedBlock (image,error);
-                           }
-                       }];
+//        [self sd_setImageWithURL:[NSURL URLWithString:toLoadURL]
+//                placeholderImage:[SDImageCache.sharedImageCache imageFromDiskCacheForKey:placeholderURL]
+//                       completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//                           if (succeedBlock) {
+//                               succeedBlock (image,error);
+//                           }
+//                       }];
     }
 }
 
