@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   }
 
   s.dependency 'SDWebImage'
+  s.dependency 'YYWebImage'
   s.dependency 'TTTAttributedLabel'
   s.dependency 'Masonry'
 
