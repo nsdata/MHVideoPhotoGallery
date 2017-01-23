@@ -8,7 +8,7 @@
 
 #import "UIImageView+MHGallery.h"
 #import "MHGallery.h"
-#import "UIImageView+WebCache.h"
+//#import "UIImageView+WebCache.h"
 #import "UIImageView+YYWebImage.h"
 
 
